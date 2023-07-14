@@ -1,0 +1,57 @@
+.todo-item-conatainer {
+  /* border: 2px solid red; */
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.todo-item {
+  width: 100%;
+  /* border: 2px solid black; */
+  align-items: center;
+  background-color: rgb(102, 220, 227);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+}
+.task-completed-item {
+  background-color: cadetblue;
+}
+.button-container button {
+  border: none;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.delete-btn {
+  background-color: #ff0000;
+  color: white;
+}
+.delete-btn:hover {
+  background-color: #d50c0c;
+}
+.update-btn {
+  background-color: blue;
+  color: white;
+  margin-left: 1rem;
+}
+.update-btn:hover {
+  background-color: rgb(16, 16, 140);
+}
+
+.loading {
+  height: 100vh;
+  width: 100%;
+
+  /* text-align: center; */
+}
+
+.loading h1 {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 10rem;
+  color: red;
+  /* padding: 4rem; */
+}
