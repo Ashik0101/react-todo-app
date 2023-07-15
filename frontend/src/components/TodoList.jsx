@@ -22,7 +22,9 @@ const TodoList = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${url}/todos`);
+        const response = await fetch(`${url}/todos`, {
+          method: "GET",
+        });
         const data = await response.json();
         setTodos(data);
       } catch (error) {
@@ -42,7 +44,7 @@ const TodoList = () => {
       });
 
       const res = await resp.json();
-      if (res.message == "Todo deleted successfully") {
+      if (res.message === "Todo deleted successfully") {
         notifyAfterDelete();
       }
 
@@ -63,7 +65,7 @@ const TodoList = () => {
         },
       });
       console.log("response object :", resppnseObject);
-      if (resppnseObject.status == 200) {
+      if (resppnseObject.status === 200) {
         notifyAfterUpdate();
       }
       // Update the state to mark the todo as completed
